@@ -1,0 +1,44 @@
+nav {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  div,svg {
+    padding: 5%;
+  }
+
+  svg {
+    width: 33%;
+    max-width: 20rem;
+  }
+
+  div {
+    width: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    a {
+      margin: 5px;
+      min-width: fit-content;
+      font-family: var(--police);
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1rem;
+      color: var(--primary);
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  nav {
+    div {
+      min-width: 20rem;
+      a {
+        font-size:  1.5rem;
+      }
+    }
+  }
+}
