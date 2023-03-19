@@ -19,9 +19,9 @@ export const Location = ({ content }) => {
 
   const hostName = host.name.split(' ');
   const equipmentText = useMemo(() => {
-    const elements = equipments.map((element) => (
-      <>{element}<br /></>
-    ))
+    const elements = equipments.map((element, index) => {
+      return <span key={index}>{element}<br /></span>
+  })
     return <>{elements}</>
   },[equipments])
 

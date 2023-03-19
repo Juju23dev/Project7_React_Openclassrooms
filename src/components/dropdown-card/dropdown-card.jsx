@@ -3,7 +3,7 @@ import { ReactComponent as UpArrow } from './../../asset/svg/up-arrow.svg';
 import { ReactComponent as DownArrow } from './../../asset/svg/down-arrow.svg';
 import './dropdown-card.scss';
 
-export const DropdownCard = ({ title, content }) => {
+export const DropdownCard = ({ title, content, }) => {
   const [open, setopen] = useState(false);
 
   const toggleCard = () => setopen((current) => !current);
