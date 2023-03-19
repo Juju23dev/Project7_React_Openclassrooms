@@ -1,0 +1,94 @@
+section {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  
+  #left_container {
+    font-family: var(--police);
+    color: var(--primary);
+    width: 100%;
+
+    h1 {
+      font-weight: 500;
+      font-size: 20px;
+      margin: 0;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+  }
+
+  #right_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--police);
+    color: var(--primary);
+    width: 100%;
+    margin: 10px 0;
+
+    div {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      img {
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+      }
+  
+      p {
+        text-align: right;
+        font-size: 12px;
+        margin: 0 8px 0 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  section {
+    flex-direction: row;
+
+    #left_container {
+      width: 50%;
+
+      h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+  
+      p {
+        font-size: 18px;
+        margin: 15px 0;
+      }
+    }
+
+    #right_container {
+      flex-direction: column-reverse;
+      justify-content: start;
+      align-items: flex-end;
+      width: 50%;
+      margin: 10px 0;
+  
+      div {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 24px;
+  
+        img {
+          height: 64px;
+          width: 64px;
+        }
+    
+        p {
+          font-size: 18px;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+}

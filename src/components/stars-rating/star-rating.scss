@@ -1,0 +1,21 @@
+#stars_container {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  svg {
+    margin: 0 3.5px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (min-width: 800px) {
+  #stars_container {
+    svg {
+      margin: 0 10px;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}

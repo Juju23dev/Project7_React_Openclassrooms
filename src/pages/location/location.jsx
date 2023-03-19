@@ -1,40 +1,54 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import './location.scss'
-import { useParams } from 'react-router-dom';
-import { getContentById, isIdValid } from './../../data/index';
-import { ImageCarrousel } from '../../components/image-caroussel/image-caroussel';
-import { NotFound } from '../not-found/not-found';
+import { ImageCarrousel } from './../../components/image-caroussel/image-caroussel';
+import { Tags } from './../../components/tag/tags';
+import { StarRating } from './../../components/stars-rating/start-rating';
+import { DropdownCard } from './../../components/dropdown-card/dropdown-card';
 
-const UrlVerifier = ({ children, id }) => {
-  return isIdValid(id) 
-    ? children
-    : <NotFound />
-}
+export const Location = ({ content }) => {
+  const {
+    title,
+    pictures,
+    location,
+    tags,
+    host,
+    rating,
+    description,
+    equipments
+  } = content;
 
-export const Location = () => {
-  const { id } = useParams();
-  const [content, setContent] = useState(getContentById(id));
-
-  useEffect(() => {
-    setContent((current) => {
-      const actualContent = getContentById(id)
-      
-      if (actualContent !== current){
-        return actualContent;
-      }
-
-      return current;
-    })
-  }, [id])
+  const hostName = host.name.split(' ');
+  const equipmentText = useMemo(() => {
+    const elements = equipments.map((element) => (
+      <>{element}<br /></>
+    ))
+    return <>{elements}</>
+  },[equipments])
 
   return (
-    <UrlVerifier id={id}>
-      { content 
-            ? <ImageCarrousel
-              images={content.pictures} 
-              />
-            : null
-      }
-    </ UrlVerifier>
+    <div id='location_container'>
+      <ImageCarrousel
+        images={pictures} 
+      />
+      <section>
+        <div id='left_container'>
+          <h1>{title}</h1>
+          <p>{location}</p>
+          <Tags tags={tags} />
+        </div>
+        <div id='right_container'>
+          <StarRating rate={rating} />
+          <div>
+            <p>
+              {hostName[0]}<br/> 
+              {hostName[1]}
+            </p>
+            <img src={host.picture} alt='' />
+          </div>
+        </div>
+      </section>
+      <DropdownCard title='Description' content={description} />
+      <DropdownCard title='Équipements' content={equipmentText} />
+    </div>
   )
 }

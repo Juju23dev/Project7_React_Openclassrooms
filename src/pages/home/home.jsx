@@ -7,9 +7,7 @@ import { string } from './../../asset/string/string_fr';
 
 const { home_background_image_text, home_background_image_alt } = string;
 
-export const Home = () => {
-
-  return (
+export const Home = () => (
     <div id='home_container'>
       <ImageBox
         id='home_background_image'
@@ -19,5 +17,4 @@ export const Home = () => {
       />
       <HomeCardList />
     </div>
-  )
-}
+);
