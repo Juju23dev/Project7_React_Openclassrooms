@@ -10,7 +10,7 @@ const {
   not_found_return_home
 } = string;
 
-export const NotFount = () => (
+export const NotFound = () => (
   <div id="not_found_container">
     <h1>
       {not_found_404}

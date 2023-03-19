@@ -1,4 +1,5 @@
 export const string = {
+  error_image_reducer_parameter: (action) => `imagesReducer parameter need to be ACTION type not : ${action}`,
   nav_home: 'Acceuil',
   nav_about_us: 'A Propos',
 

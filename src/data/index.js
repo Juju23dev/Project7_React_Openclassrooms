@@ -1,5 +1,9 @@
 import jsonData from './data.json'
 
-console.log(jsonData)
+export const data = jsonData;
 
-export const data = JSON.stringify(jsonData);
+export const getContentById = (id) => (
+  data[data.findIndex((element) => element.id === id)]
+);
+
+export const isIdValid = (id) => data.some((element) => element.id === id)

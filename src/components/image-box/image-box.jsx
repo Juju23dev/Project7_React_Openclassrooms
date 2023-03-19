@@ -1,16 +1,23 @@
 import React from 'react';
 import './image-box.scss'
 
-export const ImageBox = ({ imgAlt, imgUrl, imgText = undefined }) => {
+export const ImageBox = ({ 
+  id,
+  imgUrl,
+  imgAlt = '',
+  imgText = undefined,
+  children = null 
+}) => {
   return (
-      <div id='home_background_image'>
+      <div id={id}>
         {
           imgText
           ? <h1>{imgText}</h1>
           :null
         }
         <img src={imgUrl} alt={imgAlt} />
-        <div id='home_backgroung_image_filter'></div>
+        <div id={`${id}_filter`}></div>
+        { children ?? null } 
       </div>
   )
 }

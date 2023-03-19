@@ -1,0 +1,26 @@
+#left_arrow, #right_arrow{
+  height: 2rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+#left_arrow{
+  left: 0.5rem;
+}
+
+#right_arrow {
+  right: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  #left_arrow, #right_arrow{
+    height: 5rem;
+  }
+  #left_arrow{
+    left: 1.5rem;
+  }
+  
+  #right_arrow {
+    right: 1.5rem;
+  }
+}

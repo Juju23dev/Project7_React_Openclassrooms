@@ -1,17 +1,18 @@
 import React from 'react';
 import './home-card-list.scss';
-import { LocationCard } from '../location-card/location-card';
+import { LocationCard } from './../location-card/location-card';
+import { data  } from './../../data/index';
 
-export const HomeCardList = ({ data }) => {
+export const HomeCardList = () => {
   return (
     <div id='home_car_list_container' >
       {
         data.map((article) => {
           const { cover , title, id } = article;
-          
           return (
-            <LocationCard 
+            <LocationCard
             key={id}
+            id={id}
             cover={cover} 
             title={title} 
             />
