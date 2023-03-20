@@ -4,35 +4,41 @@ import { ImageBox } from "../../components/image-box/image-box";
 import { DropdownCard } from "../../components/dropdown-card/dropdown-card";
 import './about-us.scss';
 import { string } from "../../asset/string/string_fr";
+
 const {
-  about_us_dropdown_fiability,
-  about_us_dropdown_respect,
-  about_us_dropdown_service,
-  about_us_dropdown_security,  
-} = string
+  about_us_dropdown_fiability_title,
+  about_us_dropdown_fiability_content,
+  about_us_dropdown_respect_title,
+  about_us_dropdown_respect_content,
+  about_us_dropdown_service_title,
+  about_us_dropdown_service_content,
+  about_us_dropdown_security_title,
+  about_us_dropdown_security_content
+} = string;
+
 export const AboutUs = () => {
   return(
-    <>
+    <section id='about_us_section'>
       <ImageBox 
-        id='home_background_image'
+        id='about_us_background_image'
         imgUrl={backgroundImage} 
       />
       <DropdownCard 
-        title='Fiabilité' 
-        content={about_us_dropdown_fiability} 
+        title={about_us_dropdown_fiability_title} 
+        content={about_us_dropdown_fiability_content} 
       />
       <DropdownCard 
-        title='Respect' 
-        content={about_us_dropdown_respect}
+        title={about_us_dropdown_respect_title}
+        content={about_us_dropdown_respect_content}
       />
       <DropdownCard 
-        title='Service' 
-        content={about_us_dropdown_service}
+        title={about_us_dropdown_service_title}
+        content={about_us_dropdown_service_content}
       />
       <DropdownCard 
-        title='Sécurité' 
-        content={about_us_dropdown_security}
+        title={about_us_dropdown_security_title} 
+        content={about_us_dropdown_security_content}
       />
-    </>
+    </section>
   )
 };

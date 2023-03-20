@@ -4,6 +4,12 @@ import { ImageCarrousel } from './../../components/image-caroussel/image-carouss
 import { Tags } from './../../components/tag/tags';
 import { StarRating } from './../../components/stars-rating/start-rating';
 import { DropdownCard } from './../../components/dropdown-card/dropdown-card';
+import { string } from '../../asset/string/string_fr';
+
+const { 
+  product_dropdown_description_title,
+  product_dropdown_equipement_title
+} = string;
 
 export const Location = ({ content }) => {
   const {
@@ -47,8 +53,14 @@ export const Location = ({ content }) => {
           </div>
         </div>
       </section>
-      <DropdownCard title='Description' content={description} />
-      <DropdownCard title='Équipements' content={equipmentText} />
+      <DropdownCard 
+        title={product_dropdown_description_title} 
+        content={description} 
+      />
+      <DropdownCard 
+        title={product_dropdown_equipement_title} 
+        content={equipmentText} 
+      />
     </div>
   )
 }
