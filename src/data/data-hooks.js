@@ -1,44 +1,28 @@
 import { getData, getDataById } from './async-data';
 import { useEffect ,useState } from 'react';
 
-export const useData = () => {
+export const useAsyncFetch = (fetchFunction, ...functionParams) => {
   const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(null)
-  const [data, setData] = useState(null)
+  const [error, setError] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     ( async () => {
       try {
-        setData(await getData);
+        setData(await fetchFunction(...functionParams));
       } catch (error) {
-        setError(error)
+        setError(error);
       } finally {
         setLoading(false);
       }
     }
     )()
-  }, [])
+  }, [fetchFunction, functionParams]);
 
   return { isLoading, data, error };
 };
 
-export const useDatatById = (id) => {
-  const [isLoading, setLoading] = useState(true);
-  const [error, setError] = useState(null)
-  const [data, setData] = useState(null)
+export const useData = () => useAsyncFetch(getData);
 
-  useEffect(() => {
-    ( async () => {
-      try {
-        setData(await getDataById(id));
-      } catch (error) {
-        setError(error)
-      } finally {
-        setLoading(false);
-      }
-    }
-    )()
-  }, [id])
+export const useDatatById = (id) => useAsyncFetch(getDataById, id);
 
-  return { isLoading, data, error };
-};
