@@ -1,17 +1,20 @@
 nav {
-  width: 100vw;
+  max-width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 5vw;
 
   div,svg {
-    padding: 5%;
+    padding: 5% 0;
   }
 
-  svg {
+  #nav_logo_container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     width: 33%;
-    max-width: 20rem;
   }
 
   div {

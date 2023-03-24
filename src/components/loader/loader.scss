@@ -1,0 +1,13 @@
+#loader_container {
+  width: 100%;
+  padding: 5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    height: 30vw;
+    width: 30vw;
+    max-width: 15rem;
+  }
+};

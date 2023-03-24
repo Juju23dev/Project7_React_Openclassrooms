@@ -1,17 +1,29 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import './location.scss'
 import { ImageCarrousel } from './../../components/image-caroussel/image-caroussel';
 import { Tags } from './../../components/tag/tags';
 import { StarRating } from './../../components/stars-rating/start-rating';
 import { DropdownCard } from './../../components/dropdown-card/dropdown-card';
 import { string } from '../../asset/string/string_fr';
+import { Loader } from '../../components/loader/loader';
+import { NotFound } from '../not-found/not-found';
+import { useParams } from 'react-router-dom';
+import { useDatatById } from '../../data/data-hooks';
 
 const { 
   product_dropdown_description_title,
   product_dropdown_equipement_title
 } = string;
 
-export const Location = ({ content }) => {
+export const Location = () => {
+  const { id } = useParams();
+  const { isLoading, data, error } = useDatatById(id);
+
+  if (isLoading || error) {
+
+    return isLoading ? <Loader /> : <NotFound />;
+  }
+
   const {
     title,
     pictures,
@@ -21,15 +33,16 @@ export const Location = ({ content }) => {
     rating,
     description,
     equipments
-  } = content;
+  } = data;
 
   const hostName = host.name.split(' ');
-  const equipmentText = useMemo(() => {
-    const elements = equipments.map((element, index) => {
-      return <span key={index}>{element}<br /></span>
-  })
+  const getEquipmentText = () => {
+    const elements = equipments.map((element, index) => (
+      <span key={index}>{element}<br /></span>
+    ));
+
     return <>{elements}</>
-  },[equipments])
+  }
 
   return (
     <div id='location_container'>
@@ -59,8 +72,8 @@ export const Location = ({ content }) => {
       />
       <DropdownCard 
         title={product_dropdown_equipement_title} 
-        content={equipmentText} 
+        content={getEquipmentText()} 
       />
     </div>
   )
-}
+};

@@ -3,7 +3,7 @@
   display: flex;
   width: 100%;
   height: 8rem;
-  margin: auto;
+  margin: 2rem auto;
   border-radius: 1.5rem;
   overflow: hidden;
 
@@ -86,7 +86,7 @@
 }
 
 
-@media (min-width: 450px) {
+@media (min-width: 700px) {
   #home_background_image {
     height: 17rem;
     

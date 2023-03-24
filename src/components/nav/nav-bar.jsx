@@ -7,10 +7,12 @@ import './nav-bar.scss'
 
 const { nav_home, nav_about_us } = string;
 
-export const NavBar = (props) => {
+export const NavBar = () => {
   return (
     <nav>
-      <Logo />
+      <div id='nav_logo_container'>
+        <Logo />
+      </div>
       <div>
         <Link to={routes.HOME}>
           { nav_home }
@@ -21,4 +23,4 @@ export const NavBar = (props) => {
       </div>
     </nav>
   )
-}
+};
