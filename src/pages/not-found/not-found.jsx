@@ -10,6 +10,12 @@ const {
   not_found_return_home
 } = string;
 
+/**
+ * @NotFound is a page component
+ * @returns his components
+ * Its use By @Router
+**/
+
 export const NotFound = () => (
   <div id='not_found_container'>
     <h1>

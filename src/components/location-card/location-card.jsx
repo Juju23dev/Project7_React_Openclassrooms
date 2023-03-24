@@ -3,6 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import { routes } from './../../router/routes';
 import './location-card.scss';
 
+/**
+ * @LocationCard is a component 
+ * @prop {
+ *    id: number,
+ *    cover: string,
+ *    title: string 
+ * }
+ * @returns component use for display location card 
+ * Its use by @HomeCardList
+**/
+
 export const LocationCard = ({ id ,cover, title }) => {
   const navigate = useNavigate();
   

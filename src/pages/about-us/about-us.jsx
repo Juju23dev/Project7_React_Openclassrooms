@@ -16,6 +16,13 @@ const {
   about_us_dropdown_security_content
 } = string;
 
+/**
+ * @AboutUs is a page component
+ * @returns his components and all childrens of 
+ * @ImageBox , @DropdownCard
+ * Its use By @Router
+**/
+
 export const AboutUs = () => {
   return(
     <section id='about_us_section'>

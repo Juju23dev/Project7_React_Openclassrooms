@@ -3,6 +3,12 @@ import { ReactComponent as UpArrow } from './../../asset/svg/up-arrow.svg';
 import { ReactComponent as DownArrow } from './../../asset/svg/down-arrow.svg';
 import './dropdown-card.scss';
 
+/**
+ * @DropdownCard is a component
+ * @returns his components
+ * Its use by @AboutUs & @Location
+**/
+
 export const DropdownCard = ({ title, content, }) => {
   const [open, setopen] = useState(false);
 

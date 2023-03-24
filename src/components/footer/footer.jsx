@@ -5,6 +5,12 @@ import './footer.scss';
 
 const { footer_text } = string;
 
+/**
+ * @Footer is the footer component of the app
+ * @returns his components
+ * Its use by @App
+**/
+
 export const Footer = (props) => {
   return (
     <footer>

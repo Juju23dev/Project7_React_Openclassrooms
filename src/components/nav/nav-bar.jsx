@@ -7,6 +7,12 @@ import './nav-bar.scss';
 
 const { nav_home, nav_about_us } = string;
 
+/**
+ * @NavBar is the Nav component of the app
+ * @return his components 
+ * Its use by @App
+**/
+
 export const NavBar = () => {
   return (
     <nav>

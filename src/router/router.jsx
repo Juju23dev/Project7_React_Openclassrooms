@@ -6,6 +6,12 @@ import { Location } from './../pages/location/location';
 import { NotFound } from './../pages/not-found/not-found';
 import { routes } from './routes';
 
+/**
+ * @Router the function in charge of routing
+ * @returns Component deppending on the route use 
+ * Its use By @App
+**/
+
 export const Router = () => (
   <main>
     <Routes>

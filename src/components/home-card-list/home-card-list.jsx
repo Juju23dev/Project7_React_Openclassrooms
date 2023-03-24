@@ -7,6 +7,12 @@ import './home-card-list.scss';
 
 const { home_error } = string;
 
+/**
+ * @HomeCardList is a component
+ * @returns his components and a list of @LocationCard
+ * Its use by @Home
+**/
+
 export const HomeCardList = () => {
   const { isLoading, error, data} = useData();
 

@@ -1,6 +1,19 @@
 import React from 'react';
 import './image-box.scss';
 
+/**
+ * @HomeCardList is a component for picture rendering
+ * @prop {
+ *    id: number,
+ *    imgUrl: string,
+ *    imgAlt:string = '' ,
+ *    imgText:string = undefined,
+ *    children: ReactElement = null 
+ * }
+ * @returns Diffrent style of image card depending of his props
+ * Its use by @ImageCaroussel ,@AboutUs & @Home
+**/
+
 export const ImageBox = ({ 
   id,
   imgUrl,

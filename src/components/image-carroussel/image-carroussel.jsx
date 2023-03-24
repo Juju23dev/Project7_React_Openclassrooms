@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
-import { ImageBox } from './../../components/image-box/image-box';
+import { ImageBox } from '../image-box/image-box';
 import { ReactComponent as RightArrow } from './../../asset/svg/right-arrow.svg';
 import { ReactComponent as LeftArrow } from './../../asset/svg/left-arrow.svg';
-import { string } from './../../asset/string/string_fr';
-import './image-caroussel.scss';
+import { string } from '../../asset/string/string_fr';
+import './image-carroussel.scss';
 
 const { error_image_reducer_parameter } = string; 
 const ACTION = {
@@ -31,14 +31,22 @@ const imagesReducer = (state, action, images) => {
   }
 };
 
+/**
+ * @ImageCarr is a component for picture rendering
+ * @prop { images : string[] }  
+ * @returns a component can change picture displayed on arrow click
+ * Its use by @Location
+**/
+
 export const ImageCarrousel = ({ images }) => {
+
   const [state, dispatch] = useReducer(imagesReducer, { 
     pictureArray: images, 
     index: 0,
     arrayLength: images.length 
   });
-  const { pictureArray, index } = state;
 
+  const { pictureArray, index } = state;
   const increment = () => dispatch(ACTION.INCREMENT, images);
   const decrement = () => dispatch(ACTION.DECREMENT, images);
 

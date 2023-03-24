@@ -3,6 +3,15 @@ import { ReactComponent as FullStar } from './../../asset/svg/full-star.svg';
 import { ReactComponent as EmptyStar } from './../../asset/svg/empty-star.svg';
 import './stars-rating.scss';
 
+/**
+ * @StarRating is a component
+ * @prop {
+ *    rate: number
+ * }
+ * @return a star rate on 5 depending of the props send
+ * Its use by @Location
+**/
+
 export const StarRating = ({ rate }) => {
 
   const rating = useMemo(( limit = 5) => {
