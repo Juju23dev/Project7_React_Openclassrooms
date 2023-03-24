@@ -1,7 +1,7 @@
 import React from 'react';
-import './location-card.scss'
 import { useNavigate } from 'react-router-dom';
-import { routes } from '../../router/routes';
+import { routes } from './../../router/routes';
+import './location-card.scss';
 
 export const LocationCard = ({ id ,cover, title }) => {
   const navigate = useNavigate();

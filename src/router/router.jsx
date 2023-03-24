@@ -1,10 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { routes } from './routes';
 import { Home } from './../pages/home/home';
-import { Location } from '../pages/location/location';
-import { AboutUs } from '../pages/about-us/about-us';
+import { AboutUs } from './../pages/about-us/about-us';
+import { Location } from './../pages/location/location';
 import { NotFound } from './../pages/not-found/not-found';
+import { routes } from './routes';
 
 export const Router = () => (
   <main>

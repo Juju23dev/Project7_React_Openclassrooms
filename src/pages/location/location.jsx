@@ -1,14 +1,14 @@
 import React from 'react';
-import './location.scss'
+import { useParams } from 'react-router-dom';
+import { useDatatById } from './../../data/data-hooks';
+import { Loader } from './../../components/loader/loader';
+import { NotFound } from './../not-found/not-found';
 import { ImageCarrousel } from './../../components/image-caroussel/image-caroussel';
 import { Tags } from './../../components/tag/tags';
-import { StarRating } from './../../components/stars-rating/start-rating';
+import { StarRating } from '../../components/stars-rating/stars-rating';
 import { DropdownCard } from './../../components/dropdown-card/dropdown-card';
-import { string } from '../../asset/string/string_fr';
-import { Loader } from '../../components/loader/loader';
-import { NotFound } from '../not-found/not-found';
-import { useParams } from 'react-router-dom';
-import { useDatatById } from '../../data/data-hooks';
+import { string } from './../../asset/string/string_fr';
+import './location.scss';
 
 const { 
   product_dropdown_description_title,

@@ -1,5 +1,5 @@
 import React from 'react';
-import './image-box.scss'
+import './image-box.scss';
 
 export const ImageBox = ({ 
   id,
@@ -20,4 +20,4 @@ export const ImageBox = ({
         { children ?? null } 
       </div>
   )
-}
+};

@@ -1,7 +1,7 @@
-import { getData, getDataById } from './async-data';
 import { useEffect ,useState } from 'react';
+import { getData, getDataById } from './async-data';
 
-export const useAsyncFetch = (fetchFunction, ...functionParams) => {
+const useAsyncFetch = (fetchFunction, ...functionParams) => {
   const [isLoading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [data, setData] = useState(null);
@@ -25,4 +25,3 @@ export const useAsyncFetch = (fetchFunction, ...functionParams) => {
 export const useData = () => useAsyncFetch(getData);
 
 export const useDatatById = (id) => useAsyncFetch(getDataById, id);
-

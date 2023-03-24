@@ -1,9 +1,9 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ReactComponent as Logo } from './../../asset/svg/logo.svg'
-import { routes } from "../../router/routes";
-import { string } from "../../asset/string/string_fr";
-import './nav-bar.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from './../../asset/svg/logo.svg';
+import { routes } from './../../router/routes';
+import { string } from './../../asset/string/string_fr';
+import './nav-bar.scss';
 
 const { nav_home, nav_about_us } = string;
 

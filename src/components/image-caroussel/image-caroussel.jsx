@@ -1,9 +1,9 @@
 import React, { useReducer } from 'react';
-import './image-caroussel.scss'
+import { ImageBox } from './../../components/image-box/image-box';
 import { ReactComponent as RightArrow } from './../../asset/svg/right-arrow.svg';
 import { ReactComponent as LeftArrow } from './../../asset/svg/left-arrow.svg';
-import { ImageBox } from '../../components/image-box/image-box';
-import { string } from '../../asset/string/string_fr';
+import { string } from './../../asset/string/string_fr';
+import './image-caroussel.scss';
 
 const { error_image_reducer_parameter } = string; 
 const ACTION = {
@@ -63,4 +63,4 @@ export const ImageCarrousel = ({ images }) => {
       </ImageBox>
     </>
   )
-}
+};

@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { routes } from "../../router/routes";
-import { string } from "../../asset/string/string_fr";
-import './not-found.scss'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { routes } from './../../router/routes';
+import { string } from './../../asset/string/string_fr';
+import './not-found.scss';
 
 const { 
   not_found_404, 
@@ -11,7 +11,7 @@ const {
 } = string;
 
 export const NotFound = () => (
-  <div id="not_found_container">
+  <div id='not_found_container'>
     <h1>
       {not_found_404}
     </h1>
@@ -22,4 +22,4 @@ export const NotFound = () => (
       {not_found_return_home}
     </Link>
   </div>
-)
+);

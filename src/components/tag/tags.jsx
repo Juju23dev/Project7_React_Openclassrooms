@@ -1,5 +1,5 @@
 import React from 'react';
-import './tags.scss'
+import './tags.scss';
 
 export const Tags = ({ tags }) => (
   <div id='tags_container'>
@@ -11,4 +11,4 @@ export const Tags = ({ tags }) => (
       ))
     }
   </div>
-)
+);

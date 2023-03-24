@@ -1,9 +1,9 @@
-import React from "react";
-import backgroundImage from './../../asset/images/about-us-background.jpg'
-import { ImageBox } from "../../components/image-box/image-box";
-import { DropdownCard } from "../../components/dropdown-card/dropdown-card";
+import React from 'react';
+import { ImageBox } from './../../components/image-box/image-box';
+import { DropdownCard } from './../../components/dropdown-card/dropdown-card';
+import { string } from './../../asset/string/string_fr';
+import backgroundImage from './../../asset/images/about-us-background.jpg';
 import './about-us.scss';
-import { string } from "../../asset/string/string_fr";
 
 const {
   about_us_dropdown_fiability_title,

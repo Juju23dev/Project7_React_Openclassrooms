@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { ReactComponent as FullStar } from './../../asset/svg/full-star.svg';
 import { ReactComponent as EmptyStar } from './../../asset/svg/empty-star.svg';
-import './star-rating.scss'
+import './stars-rating.scss';
 
 export const StarRating = ({ rate }) => {
 

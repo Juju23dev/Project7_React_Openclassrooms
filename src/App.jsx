@@ -1,8 +1,7 @@
-import React from "react";
-import { Router } from "./router/router";
-import { NavBar } from "./components/nav/nav-bar";
-import { Footer } from "./components/footer/footer";
-
+import React from 'react';
+import { NavBar } from './components/nav/nav-bar';
+import { Router } from './router/router';
+import { Footer } from './components/footer/footer';
 
 export const App = () => (
   <>
@@ -10,4 +9,4 @@ export const App = () => (
     <Router />
     <Footer />
   </>
-)
+);

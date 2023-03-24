@@ -1,9 +1,9 @@
 import React from 'react';
-import './home.scss'
-import backgroundImage from './../../asset/images/home-background.jpg'
 import { ImageBox } from './../../components/image-box/image-box';
 import { HomeCardList } from './../../components/home-card-list/home-card-list';
 import { string } from './../../asset/string/string_fr';
+import backgroundImage from './../../asset/images/home-background.jpg';
+import './home.scss';
 
 const { home_background_image_text, home_background_image_alt } = string;
 
